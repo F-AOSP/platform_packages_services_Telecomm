@@ -664,6 +664,7 @@ public class TelecomService extends Service {
                 } else {
                     mAppOpsManager.checkPackage(Binder.getCallingUid(),
                             phoneAccountHandle.getComponentName().getPackageName());
+
                     // Make sure it doesn't cross the UserHandle boundary
                     enforceUserHandleMatchesCaller(phoneAccountHandle);
                 }
